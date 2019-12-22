@@ -1,0 +1,23 @@
+#child1 {
+  position: absolute;
+  top: 150px;
+  left: 400px;
+}
+
+#Div {
+	position: absolute;
+	top : 780;
+	left: 300;
+}
+
+	#child2 {
+  position: absolute;
+  top: 150px;
+  left: 800px;
+}
+
+#quizButton {
+	position: absolute;
+  	top: 600px;
+  	left: 800px;
+}

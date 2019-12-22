@@ -1,0 +1,75 @@
+<!-- Orrifice Meter Experiment to determine the coefficient of discharge (Cd) using the orifice meter-->
+<html>
+<head>
+	<title>Orifice Experiment</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="styles.css" >
+
+</head>
+<body>
+	<center><h2 style = "color: blue;"><u><B><I>Orifice Experiment</I></B></u></h2></center>
+	<!-- Canvas holding the Experiment Apparatus-->	
+	<center><canvas id = "myCanvas" width = "1000" height = "600" style=" border:10px solid #483d8b ;    padding: 0;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+ 
+;">This is Canvas</canvas></center>0
+	<!-- Canvas Holding Input and Output form-->
+	<center><canvas id = "I_O" width = "1000" height = "250" style=" border:10px solid #483d8b ;">This is Canvas</canvas></center>
+	
+
+	<script src = "layout.js"></script>
+
+	<script src = "animation.js"></script>
+
+	<script src = "layout2.js"> </script>
+
+	<button  type = "button" class="btn btn-success" onclick =  "animations()" id = 'child1' >Start</button>  <!--Start Button-->
+<script>
+    var urls = ["quiz1.html"];
+    function goSomewhere() {
+        var url = urls[Math.floor(Math.random()*urls.length)];
+        window.open(url); // redirect
+    }
+</script>
+<button onclick="goSomewhere()" class="btn btn-success" id = "quizButton">Quiz</button>
+	<input type="button" class="btn btn-info" value="Re-set" onClick="document.location.reload(true) " id = "child2"> <!--Re-set Button-->
+
+	<!-- Form to give Inputs and get Output-->
+<form name = "Calculations" id = "Div">
+
+<label style = "color: blue; font: bold;">H (cm):</label> 
+<input type="number" name ="Height" id = "ht" style = "position:absolute; top:0; left: 120;">
+
+<label style = "position:absolute; top:0; left: 500; left: 500; color: blue">Q_a:</label> 
+<input type="text" name="q_a" style = "position:absolute; top:0; left: 550"><br><br>
+
+<label style = "color: blue; font: bold;">Da (cm):</label> 
+<input type="number" name="D1"  style = "position:absolute; top:40; left: 120">
+
+<label  style = "position:absolute; top:50; left: 500;color: blue">Q_th:</label>
+<input type="text" name="q_th"  style = "position:absolute; top:50; left: 550"><br><br>
+
+<label style = "color: blue; font: bold;">Db (cm):</label> 
+<input type="number" name="D2"  style = "position:absolute; top:85; left: 120">
+
+<label style = "position:absolute; top:100; left: 500;color: blue">C_d:</label> 
+<input type="text" name="c_d"  style = "position:absolute; top:100; left: 550"><br><br>
+
+<label style = "color: blue; font: bold;">Time (sec):</label> 
+<input type="number" name="Time"  style = "position:absolute; top:130; left: 120"><br><br>
+
+<input type="button" class="btn btn-primary btn-xs" onClick="Results()" value="Calculate" style = "position:absolute; top:160; left: 350">
+</form>
+
+<script src = "calculator.js"></script>
+	
+</body>
+</html>
+
+
